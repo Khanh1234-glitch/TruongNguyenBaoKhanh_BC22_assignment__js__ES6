@@ -1,8 +1,12 @@
-const heading = document.querySelector(".heading");
-const char = heading.innerText;
 const textJump = (char) => {
-    return [...char].map((char) => {
-        return `<span>${char}</span> `;
-    });
+    const text = document.querySelector(".heading").innerHTML;
+    char = text.split(" ");
+    const join = char.join(" ");
+    const arr = [...join];
+    let content = "";
+    for (let i in arr) {
+        content += `<span>${arr[i]}</span>`
+    }
+    document.querySelector(".heading").innerHTML = content;
 };
-heading.innerHTML = textJump(char);
+textJump();
