@@ -1,8 +1,8 @@
-const textJump = (char) => {
+const textJump = (char,join,arr) => {
     const text = document.querySelector(".heading").innerHTML;
     char = text.split(" ");
-    const join = char.join(" ");
-    const arr = [...join];
+    join = char.join(" ");
+    arr = [...join];
     let content = "";
     for (let i in arr) {
         content += `<span>${arr[i]}</span>`
